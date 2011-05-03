@@ -12,7 +12,7 @@ $count = count($items) <= sfConfig::get('app_popular_news_count', 3)
 ?>
 
 <div id="last-news-block" class="popular">
-    <h2><?php echo __('Our News') ?></h2>
+    <span class="h2-title"><?php echo __('Our News') ?></span>
     <?php for ($i = 0; $i < $count; $i++): ?>
         <div>
             <span class="date"><?php echo format_date($items[$i]->getPubdate()) ?></span>
