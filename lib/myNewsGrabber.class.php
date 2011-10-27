@@ -38,7 +38,7 @@ class myNewsGrabber
 
             if($browser->get($this->source)->responseIsError()) {
                 $error = 'The given URL (%s) returns an error (%s: %s)';
-                $error = sprintf($error, $uri, $browser->getResponseCode(), $browser->getResponseMessage());
+                $error = sprintf($error, $this->source, $browser->getResponseCode(), $browser->getResponseMessage());
                 throw new Exception($error);
             }
 
